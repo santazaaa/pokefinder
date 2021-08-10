@@ -20,14 +20,14 @@ func TestFindByNameOrID_ShouldReturnErrorIfNotFound(t *testing.T) {
 	assert.NotNil(t, err)
 }
 
-func FindEncountersByNameOrID_ShouldReturnDataIfFound(t *testing.T) {
+func TestFindEncountersByNameOrID_ShouldReturnDataIfFound(t *testing.T) {
 	name := "ditto"
 	res, err := FindEncountersByNameOrID(name)
 	assert.Nil(t, err)
 	assert.NotNil(t, res)
 }
 
-func FindEncountersByNameOrID_ShouldReturnErrorIfNotFound(t *testing.T) {
+func TestFindEncountersByNameOrID_ShouldReturnErrorIfNotFound(t *testing.T) {
 	name := "some_invalid_name"
 	_, err := FindEncountersByNameOrID(name)
 	assert.NotNil(t, err)
