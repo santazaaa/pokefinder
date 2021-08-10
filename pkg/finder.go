@@ -7,10 +7,6 @@ import (
 	"github.com/santazaaa/pokefinder/pkg/api"
 )
 
-func init() {
-	api.InitCache()
-}
-
 func SearchPokemon(nameOrID string) {
 	defer api.SaveCacheFile()
 

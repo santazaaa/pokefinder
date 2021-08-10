@@ -8,6 +8,10 @@ import (
 )
 
 func fetch(url string, jsonResp interface{}) error {
+	if c == nil {
+		InitCache()
+	}
+
 	// try to get body from cache before actually fetching it
 	cachedBody, cached := c.Get(url)
 	if cached {
